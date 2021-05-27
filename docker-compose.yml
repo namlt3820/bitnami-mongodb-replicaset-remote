@@ -10,7 +10,7 @@ services:
       - 'replicaset-remote-data:/bitnami/mongodb'
       - '/data/shard.key:/data/shard.key'
     environment:
-      - MONGODB_EXTRA_FLAGS= --replSet=shard-config --keyFile=/data/shard.key
+      - MONGODB_EXTRA_FLAGS= --replSet=replicaset-remote --keyFile=/data/shard.key
 volumes:
   replicaset-remote-data:
     driver: local
