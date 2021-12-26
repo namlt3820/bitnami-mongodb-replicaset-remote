@@ -11,6 +11,7 @@ services:
       - '/data/shard.key:/data/shard.key'
     environment:
       - MONGODB_EXTRA_FLAGS= --replSet=replicaset-remote --keyFile=/data/shard.key
+    restart: always
 volumes:
   replicaset-remote-data:
     driver: local
