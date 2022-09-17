@@ -12,6 +12,8 @@ services:
     environment:
       - MONGODB_EXTRA_FLAGS= --replSet=replicaset-remote --keyFile=/data/shard.key
     restart: always
+    mem_limit: 10000m
+    cpu_shares: 512
 volumes:
   replicaset-remote-data:
     driver: local
